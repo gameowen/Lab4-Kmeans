@@ -137,14 +137,16 @@ public class KmeansSeq {
 						newCentroid.y += p.y;
 					}
 
-					newCentroid.x = newCentroid.x / n;
-					newCentroid.y = newCentroid.y / n;
-					curCentroidList.add(newCentroid);
+					
 				}
+				newCentroid.x = newCentroid.x / n;
+				newCentroid.y = newCentroid.y / n;
+				curCentroidList.add(newCentroid);
 			}
 			times++;
 		}
 		System.out.print(curCentroidList);
+		System.out.print(times);
 		return times;
 	}
 
@@ -168,7 +170,7 @@ public class KmeansSeq {
 	public static void main(String[] args) {
 		KmeansSeq ks = new KmeansSeq();
 		ks.readData("test.txt");
-		ks.Assign(2);
+		ks.Assign(3);
 		// System.out.println(ks.toString());
 
 	}
